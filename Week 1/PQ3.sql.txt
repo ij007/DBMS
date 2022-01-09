@@ -1,0 +1,5 @@
+select t.title 
+	from book_authors as b
+	inner join book_catalogue as t on
+	b.isbn_no = t.isbn_no where 
+	b.author_fname='Joh Paul' and b.author_lname='Mueller'

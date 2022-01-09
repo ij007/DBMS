@@ -1,0 +1,1 @@
+select name from managers where team_id = 'T0005'

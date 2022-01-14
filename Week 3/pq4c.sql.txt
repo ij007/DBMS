@@ -1,0 +1,4 @@
+select faculty_fname,faculty_lname 
+from faculty where faculty.id not in 
+(select members.id from members natural join book_issue 
+where members.member_no = book_issue.member_no and members.id like '%_')

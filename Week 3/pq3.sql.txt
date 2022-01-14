@@ -1,0 +1,6 @@
+select count(title)
+		from (select * from book_issue) as bo
+		natural join
+		(select * from book_copies natural join book_catalogue) as bc
+		where doi = '20210811'
+

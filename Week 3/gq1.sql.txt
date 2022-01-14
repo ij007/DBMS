@@ -1,0 +1,2 @@
+
+select match_num, name from match_referees mr left join referees ri on mr.referee = ri.referee_id natural join matches where match_date = '20200511'

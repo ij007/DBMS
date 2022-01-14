@@ -1,0 +1,4 @@
+select distinct name 
+	from teams 
+	where team_id in (select guest_team_id from matches group by guest_team_id having count(*)>3) 
+	or team_id in (select host_team_id from matches group by host_team_id having count(*)>3)`	`

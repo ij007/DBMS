@@ -1,0 +1,6 @@
+select distinct faculty_fname, faculty_lname 
+	from 
+		(select * from faculty fc natural join members mb where department_code = 'ME') AS dt   
+		inner join
+		(select * from members natural join book_issue where member_class = 'Faculty') as tb
+		on dt.member_no = tb.member_no

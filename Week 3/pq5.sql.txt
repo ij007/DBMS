@@ -1,0 +1,9 @@
+select distinct(title) from
+book_catalogue natural join book_copies natural join
+book_issue natural join members
+where member_type = 'PG'
+except
+select distinct(title) from
+book_catalogue natural join book_copies natural join
+book_issue natural join members
+where member_type = 'UG'

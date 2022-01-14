@@ -1,0 +1,2 @@
+select pl.name from players as pl left join teams on pl.team_id = teams.team_id where teams.name = 'All Stars' and dob = (select max(dob) from players as pl left join teams on pl.team_id = teams.team_id where teams.name = 'All Stars')
+

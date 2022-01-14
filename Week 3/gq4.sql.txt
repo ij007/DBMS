@@ -1,0 +1,6 @@
+select distinct student_fname, student_lname from students as s 
+where roll_no in 
+(select roll_no from members 
+ 	where member_no in 
+ 	(select member_no from book_issue group by member_no having count(member_no)>=1)
+)

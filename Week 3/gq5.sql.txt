@@ -1,0 +1,4 @@
+select distinct bt.title, count(bc.isbn_no) 
+from book_copies bc, book_catalogue bt 
+group by bc.isbn_no, bt.title 
+having bt.title like '%Database%'
